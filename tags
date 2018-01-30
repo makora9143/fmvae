@@ -1,0 +1,192 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/37977c8/
+Abstract	ijcai18/ijcai18.tex	/^\\subsection{Abstract}$/;"	t
+Acknowledgments	ijcai18/ijcai18.tex	/^\\section*{Acknowledgments}$/;"	s
+Blind Review	ijcai18/ijcai18.tex	/^\\subsubsection{Blind Review}$/;"	u
+Citations	ijcai18/ijcai18.tex	/^\\subsection{Citations}$/;"	t
+Decoder	fvae.py	/^class Decoder(nn.Module):$/;"	c
+Decoder	ssvae.py	/^class Decoder(nn.Module):$/;"	c
+Decoder	vae.py	/^class Decoder(nn.Module):$/;"	c
+Encoder	fvae.py	/^class Encoder(nn.Module):$/;"	c
+Encoder	ssvae.py	/^class Encoder(nn.Module):$/;"	c
+Encoder	vae.py	/^class Encoder(nn.Module):$/;"	c
+Encoder_y	ssvae.py	/^class Encoder_y(nn.Module):$/;"	c
+FVAE	fvae.py	/^class FVAE(nn.Module):$/;"	c
+FashionMNISTIndexed	fvae.py	/^class FashionMNISTIndexed(FashionMNIST):$/;"	c
+Footnotes	ijcai18/ijcai18.tex	/^\\subsection{Footnotes}$/;"	t
+Format of Electronic Manuscript	ijcai18/ijcai18.tex	/^\\subsection{Format of Electronic Manuscript}$/;"	t
+Headings and Sections	ijcai18/ijcai18.tex	/^\\subsection{Headings and Sections}$/;"	t
+Illustrations	ijcai18/ijcai18.tex	/^\\section{Illustrations}$/;"	s
+Introduction	ijcai18/ijcai18.tex	/^\\section{Introduction}$/;"	s
+LastFMCSVDataset	dataset.py	/^class LastFMCSVDataset(data.Dataset):$/;"	c
+Layout	ijcai18/ijcai18.tex	/^\\subsection{Layout}$/;"	t
+Length of Papers	ijcai18/ijcai18.tex	/^\\subsection{Length of Papers}$/;"	t
+MF	mf.py	/^class MF(nn.Module):$/;"	c
+MNISTIndexed	fvae.py	/^class MNISTIndexed(MNIST):$/;"	c
+R	mf.py	/^    R = Variable(img.squeeze(0))$/;"	v
+Section Headings	ijcai18/ijcai18.tex	/^\\subsubsection{Section Headings}$/;"	u
+Special Sections	ijcai18/ijcai18.tex	/^\\subsubsection{Special Sections}$/;"	u
+Style and Format	ijcai18/ijcai18.tex	/^\\section{Style and Format}$/;"	s
+Subsection Headings	ijcai18/ijcai18.tex	/^\\subsubsection{Subsection Headings}$/;"	u
+Subsubsection Headings	ijcai18/ijcai18.tex	/^\\subsubsection{Subsubsection Headings}$/;"	u
+Text	ijcai18/ijcai18.tex	/^\\subsection{Text}$/;"	t
+Title and Author Information	ijcai18/ijcai18.tex	/^\\subsection{Title and Author Information}$/;"	t
+ToTensor	dataset.py	/^class ToTensor(object):$/;"	c
+VAE	ssvae.py	/^class VAE(nn.Module):$/;"	c
+VAE	vae.py	/^class VAE(nn.Module):$/;"	c
+Word Processing Software	ijcai18/ijcai18.tex	/^\\subsection{Word Processing Software}$/;"	t
+\\LaTeX{	ijcai18/ijcai18.tex	/^\\section{\\LaTeX{} and Word Style Files}\\label{stylefiles}$/;"	s
+__call__	dataset.py	/^    def __call__(self, item):$/;"	m	class:ToTensor
+__getitem__	dataset.py	/^    def __getitem__(self, index):$/;"	m	class:LastFMCSVDataset
+__getitem__	fvae.py	/^    def __getitem__(self, index):$/;"	m	class:FashionMNISTIndexed
+__getitem__	fvae.py	/^    def __getitem__(self, index):$/;"	m	class:MNISTIndexed
+__init__	dataset.py	/^    def __init__(self, root_dir, domain, transform=None, separater='\\t'):$/;"	m	class:LastFMCSVDataset
+__init__	fvae.py	/^    def __init__(self, z_dim, input_dim=784, hidden_dim=500):$/;"	m	class:Decoder
+__init__	fvae.py	/^    def __init__(self, z_dim, input_dim=784, hidden_dim=500):$/;"	m	class:Encoder
+__init__	fvae.py	/^    def __init__(self, z_dim, u_dim, v_dim, input_dim=784, hidden_dim=500, use_cuda=False):$/;"	m	class:FVAE
+__init__	fvae.py	/^    def __init__(self,*args, **kwargs):$/;"	m	class:FashionMNISTIndexed
+__init__	fvae.py	/^    def __init__(self,*args, **kwargs):$/;"	m	class:MNISTIndexed
+__init__	mf.py	/^    def __init__(self, row_dim, col_dim, K):$/;"	m	class:MF
+__init__	ssvae.py	/^    def __init__(self, y_dim, hidden_dim):$/;"	m	class:Encoder_y
+__init__	ssvae.py	/^    def __init__(self, z_dim, hidden_dim, y_dim):$/;"	m	class:Decoder
+__init__	ssvae.py	/^    def __init__(self, z_dim, hidden_dim, y_dim):$/;"	m	class:Encoder
+__init__	ssvae.py	/^    def __init__(self, z_dim=50, y_dim=10, hidden_dim=500, use_cuda=False):$/;"	m	class:VAE
+__init__	vae.py	/^    def __init__(self, z_dim, hidden_dim):$/;"	m	class:Decoder
+__init__	vae.py	/^    def __init__(self, z_dim, hidden_dim):$/;"	m	class:Encoder
+__init__	vae.py	/^    def __init__(self, z_dim=50, hidden_dim=400, use_cuda=False):$/;"	m	class:VAE
+__len__	dataset.py	/^    def __len__(self):$/;"	m	class:LastFMCSVDataset
+abelson-et-al:scheme	ijcai18/ijcai18.bib	/^@book{ abelson-et-al:scheme,$/;"	b
+adam_args	fvae.py	/^    adam_args = {'lr': 0.01}$/;"	v
+adam_args	ssvae.py	/^    adam_args = {'lr': 0.01}$/;"	v
+adam_args	vae.py	/^    adam_args = {'lr': 0.01}$/;"	v
+adam_params	mf.py	/^    adam_params = {"lr": 0.0005}$/;"	v
+batch_size	fvae.py	/^    batch_size = 100$/;"	v
+batch_size	ssvae.py	/^    batch_size = 100$/;"	v
+batch_size	vae.py	/^    batch_size = 100$/;"	v
+bgf:Lixto	ijcai18/ijcai18.bib	/^@inproceedings{ bgf:Lixto,$/;"	b
+brachman-schmolze:kl-one	ijcai18/ijcai18.bib	/^@article{ brachman-schmolze:kl-one,$/;"	b
+data	dataset.py	/^import torch.utils.data as data$/;"	I
+data	fvae.py	/^import torch.utils.data as data$/;"	I
+data	mf.py	/^import torch.utils.data as data$/;"	I
+data	ssvae.py	/^import torch.utils.data as data$/;"	I
+data	vae.py	/^import torch.utils.data as data$/;"	I
+dataset.py	dataset.py	1;"	F
+datasets	mf.py	/^import torchvision.datasets as datasets$/;"	I
+datasets	ssvae.py	/^import torchvision.datasets as datasets$/;"	I
+datasets	vae.py	/^import torchvision.datasets as datasets$/;"	I
+dist	fvae.py	/^import pyro.distributions as dist$/;"	I
+dist	mf.py	/^import pyro.distributions as dist$/;"	I
+dist	ssvae.py	/^import pyro.distributions as dist$/;"	I
+dist	vae.py	/^import pyro.distributions as dist$/;"	I
+epoch_loss	ssvae.py	/^        epoch_loss = 0$/;"	v
+epoch_loss	vae.py	/^        epoch_loss = 0$/;"	v
+epochs	fvae.py	/^    epochs = 10$/;"	v
+epochs	ssvae.py	/^    epochs = 10$/;"	v
+epochs	vae.py	/^    epochs = 10$/;"	v
+forward	fvae.py	/^    def forward(self, x):$/;"	m	class:Encoder
+forward	fvae.py	/^    def forward(self, z):$/;"	m	class:Decoder
+forward	mf.py	/^    def forward(self):$/;"	m	class:MF
+forward	ssvae.py	/^    def forward(self, x):$/;"	m	class:Encoder
+forward	ssvae.py	/^    def forward(self, x):$/;"	m	class:Encoder_y
+forward	ssvae.py	/^    def forward(self, z):$/;"	m	class:Decoder
+forward	vae.py	/^    def forward(self, x):$/;"	m	class:Encoder
+forward	vae.py	/^    def forward(self, z):$/;"	m	class:Decoder
+fvae.py	fvae.py	1;"	F
+generate	ssvae.py	/^    def generate(self, batch_size=1):$/;"	m	class:VAE
+generate	vae.py	/^    def generate(self, batch_size=1):$/;"	m	class:VAE
+gls:hypertrees	ijcai18/ijcai18.bib	/^@article{ gls:hypertrees,$/;"	b
+gottlob:nonmon	ijcai18/ijcai18.bib	/^@article{ gottlob:nonmon,$/;"	b
+guide	fvae.py	/^    def guide(self, x, y):$/;"	m	class:FVAE
+guide	mf.py	/^    def guide(self, x):$/;"	m	class:MF
+guide	ssvae.py	/^    def guide(self, x, y=None):$/;"	m	class:VAE
+guide	vae.py	/^    def guide(self, x):$/;"	m	class:VAE
+guide_classify	ssvae.py	/^    def guide_classify(self, x, y):$/;"	m	class:VAE
+ijcai18.bib	ijcai18/ijcai18.bib	1;"	F
+ijcai18.tex	ijcai18/ijcai18.tex	1;"	F
+img	mf.py	/^    img = Image.open('.\/Buson_Nopperabo.jpg')$/;"	v
+img	mf.py	/^    img = ImageOps.grayscale(img)$/;"	v
+img	mf.py	/^    img = transforms.ToTensor()(img)$/;"	v
+kwargs	fvae.py	/^    kwargs = {'num_workers': 1, 'pin_memory': True} if False else {}$/;"	v
+kwargs	ssvae.py	/^    kwargs = {'num_workers': 1, 'pin_memory': True} if False else {}$/;"	v
+kwargs	vae.py	/^    kwargs = {'num_workers': 1, 'pin_memory': True} if False else {}$/;"	v
+levesque:belief	ijcai18/ijcai18.bib	/^@inproceedings{ levesque:belief,$/;"	b
+levesque:functional-foundations	ijcai18/ijcai18.bib	/^@article{ levesque:functional-foundations,$/;"	b
+loss	fvae.py	/^            loss = svi.evaluate_loss(x, y)$/;"	v
+loss	fvae.py	/^            loss = svi.step(x, y)$/;"	v
+loss	mf.py	/^        loss = svi.step(R)$/;"	v
+loss	ssvae.py	/^            loss = svi.step(x, y)$/;"	v
+loss	ssvae.py	/^            loss = svi_aux.step(x,y)$/;"	v
+loss	vae.py	/^            loss = svi.step(Variable(x))$/;"	v
+losses	fvae.py	/^    losses = []$/;"	v
+losses	mf.py	/^    losses = []$/;"	v
+main.py	main.py	1;"	F
+mf	mf.py	/^    mf = MF(R.size(0), R.size(1), 50)$/;"	v
+mf.py	mf.py	1;"	F
+model	fvae.py	/^    def model(self, x, y):$/;"	m	class:FVAE
+model	mf.py	/^    def model(self, x):$/;"	m	class:MF
+model	ssvae.py	/^    def model(self, x, y=None):$/;"	m	class:VAE
+model	vae.py	/^    def model(self, x):$/;"	m	class:VAE
+model_classify	ssvae.py	/^    def model_classify(self, x, y):$/;"	m	class:VAE
+nebel:jair-2000	ijcai18/ijcai18.bib	/^@article{ nebel:jair-2000,$/;"	b
+nn	fvae.py	/^import torch.nn as nn$/;"	I
+nn	main.py	/^import torch.nn as nn$/;"	I
+nn	mf.py	/^import torch.nn as nn$/;"	I
+nn	ssvae.py	/^import torch.nn as nn$/;"	I
+nn	vae.py	/^import torch.nn as nn$/;"	I
+optimizer	fvae.py	/^    optimizer = Adam(adam_args)$/;"	v
+optimizer	mf.py	/^    optimizer = Adam(adam_params)$/;"	v
+optimizer	ssvae.py	/^    optimizer = Adam(adam_args)$/;"	v
+optimizer	vae.py	/^    optimizer = Adam(adam_args)$/;"	v
+pd	dataset.py	/^import pandas as pd$/;"	I
+plt	fvae.py	/^    import matplotlib.pyplot as plt$/;"	I
+plt	mf.py	/^    import matplotlib.pyplot as plt$/;"	I
+plt	mf.py	/^import matplotlib.pyplot as plt$/;"	I
+plt	ssvae.py	/^import matplotlib.pyplot as plt$/;"	I
+plt	vae.py	/^import matplotlib.pyplot as plt$/;"	I
+qu	mf.py	/^    qu = pyro.param('qu_mu')$/;"	v
+qv	mf.py	/^    qv = pyro.param('qv_mu')$/;"	v
+recon	mf.py	/^    recon = torch.matmul(qu, torch.t(qv)).data.numpy()$/;"	v
+recon_img	ssvae.py	/^        recon_img = vae.reconstruct_img(test_img)$/;"	v
+recon_img	vae.py	/^        recon_img = vae.reconstruct_img(test_img)$/;"	v
+reconstruct_img	ssvae.py	/^    def reconstruct_img(self, x):$/;"	m	class:VAE
+reconstruct_img	vae.py	/^    def reconstruct_img(self, x):$/;"	m	class:VAE
+setup_data_loaders	dataset.py	/^def setup_data_loaders(dataset, use_cuda, batch_size, transform=False, root='.\/data\/last.fm', /;"	f
+ssvae.py	ssvae.py	1;"	F
+stylefiles	ijcai18/ijcai18.tex	/^\\section{\\LaTeX{} and Word Style Files}\\label{stylefiles}$/;"	l
+svi	fvae.py	/^    svi = SVI(vae.model, vae.guide, optimizer, loss='ELBO')$/;"	v
+svi	mf.py	/^    svi = SVI(mf.model, mf.guide, optimizer, loss='ELBO', num_particles=5)$/;"	v
+svi	ssvae.py	/^    svi = SVI(vae.model, vae.guide, optimizer, loss='ELBO', enum_discrete=True)$/;"	v
+svi	vae.py	/^    svi = SVI(vae.model, vae.guide, optimizer, loss='ELBO')$/;"	v
+svi_aux	ssvae.py	/^    svi_aux = SVI(vae.model_classify, vae.guide_classify, optimizer, loss='ELBO')$/;"	v
+test_img	ssvae.py	/^    test_img = Variable(test_loader.dataset[0][0])$/;"	v
+test_img	vae.py	/^    test_img = Variable(test_loader.dataset[0][0])$/;"	v
+test_loader	fvae.py	/^    test_loader = data.DataLoader($/;"	v
+test_loader	ssvae.py	/^    test_loader = data.DataLoader($/;"	v
+test_loader	vae.py	/^    test_loader = data.DataLoader($/;"	v
+train	main.py	/^def train():$/;"	f
+train_epoch	main.py	/^def train_epoch(data_loaders):$/;"	f
+train_loader	fvae.py	/^    train_loader = data.DataLoader($/;"	v
+train_loader	ssvae.py	/^    train_loader = data.DataLoader($/;"	v
+train_loader	vae.py	/^    train_loader = data.DataLoader($/;"	v
+transforms	dataset.py	/^import torchvision.transforms as transforms$/;"	I
+transforms	fvae.py	/^import torchvision.transforms as transforms$/;"	I
+transforms	main.py	/^import torchvision.transforms as transforms$/;"	I
+transforms	mf.py	/^    import torchvision.transforms as transforms$/;"	I
+transforms	mf.py	/^import torchvision.transforms as transforms$/;"	I
+transforms	ssvae.py	/^import torchvision.transforms as transforms$/;"	I
+transforms	vae.py	/^import torchvision.transforms as transforms$/;"	I
+vae	fvae.py	/^    vae = FVAE(6, 60000, 10, use_cuda=False)$/;"	v
+vae	ssvae.py	/^    vae = VAE(use_cuda=False)$/;"	v
+vae	vae.py	/^    vae = VAE(use_cuda=False)$/;"	v
+vae.py	vae.py	1;"	F
+x	fvae.py	/^            x = Variable(x.float().view(-1, 784))$/;"	v
+x	ssvae.py	/^            x = x.view(-1, 784)$/;"	v
+x	ssvae.py	/^            x, y = Variable(x), Variable(yp)$/;"	v
+y	fvae.py	/^            y = Variable(y[0]), Variable(y[1])$/;"	v
+y	ssvae.py	/^            x, y = Variable(x), Variable(yp)$/;"	v
+yp	ssvae.py	/^    yp = torch.FloatTensor(batch_size, 10)$/;"	v

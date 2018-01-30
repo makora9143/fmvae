@@ -1,0 +1,80 @@
+1) 本研究で扱いたい問題の説明
+複数の高次元で複雑な実データに共通の潜在パターンの抽出
+
+1*) xxxからyyyする方法はzzzやaaaを実現するために重要である。
+
+2) 既存手法の問題
+NM2Fでは，補助行列を加えることで，共有の潜在パターンの抽出をやっている
+->線形分解のため，高次元で複雑なデータでは表現力が足りない
+FVAEでは，VAEを適用することで，表現力を向上している
+->複数のデータを同時には扱っていない
+
+2*) 本問題を解く方法にはaやbがあるが、xxxからyyyする上では()または()が不足している
+
+3) 本研究の提案
+両方のいいところどりであるFMVAEの提案
+
+3*) 本研究では、()かつ()な方法として、()と()を組み合わせた方法を提案する。（もう一文くらい具体的な手法の説明）
+
+
+4) 有効性の検証方法 & 有効だったのか
+人工データと実データセットを用いて，従来の手法と汎化性能を比較
+→おそらく有効
+
+5) （オプショナル）本研究の重要性（Significance）
+
+
+
+
+ユーザの特徴は，購買行動や動画視聴など様々なデータ形式で表現されている．
+行列・テンソル分解は，これらの観測された実データにおける共通の潜在パターンの抽出を可能にするため重要な技術である．
+しかし，実データの多くは表現が複雑であり，線形性を持たないため，線形分解を行う行列・テンソル分解では扱いきれない．
+一方，VAEは複雑なデータを扱うことができ，特にFVAEは，単一種類のデータでの潜在パターンを抽出することができる．
+しかし，FVAEは複数種類のデータにおける共通の潜在パターンの抽出はできない．
+そこで，本研究では，複数種類の複雑なデータから共通の潜在パターンの抽出を可能とするFMVAEを提案する．
+本稿では，FMVAEを評価するため，人工データと実データを用いた実験を行い，その結果について報告する．
+
+
+
+
+
+行列・テンソル分解は，観測された実データにおける潜在パターンを抽出する方法として非常に有効である．
+観測行列に補助行列を追加し，行列分解を行うことで分解の性能を向上させることができる．
+一方で，行列分解は線形に分解するため，高次元で複雑なデータに対応することが難しい．
+そこで本研究では，分解複合変分オートエンコーダ(Factorized Multiple Variational Autoencoder: FMVAE)を提案する．
+FMVAEは，変分オートエンコーダを複合非負行列分解に適用した手法である．
+FMVAEによって，高次元かつ非常に複雑な情報を非線形に分解することが可能となる．
+本稿では，FMVAEを評価するため，人工データと実データを用いた実験を行い，その結果について報告する．
+
+
+
+[Google 翻訳]
+Matrix / tensor decomposition is very effective as a method of extracting latent patterns in observed real data.
+By adding an auxiliary matrix to the observation matrix and matrix decomposition, decomposition performance can be improved.
+On the other hand, since matrix decomposition is linearly decomposed, it is difficult to cope with high dimensional complex data.
+Therefore, in this research we propose a decomposed compound variable auto encoder (FMVAE).
+FMVAE is a technique in which a variational auto encoder is applied to composite non-negative matrix decomposition.
+FMVAE makes it possible to nonlinearly decompose high-dimensional and very complicated information.
+In this paper, in order to evaluate FMVAE, experiments using artificial data and actual data are carried out and the results are reported.
+
+
+The user features are represented in various modal data formats such as purchase and movie watching behavior.
+Matrix and tensor factorization is a significant method enabling to extract of common latent patterns in observed real data; .
+However, many of real data representation is complex and do not have linearity, so they cannot be handled by tensor factorization that performs linear decomposition.
+On the other hand, variational autoencoder can handle complex data, especially factorized variational autoencoder can extract latent patterns with single modal data.
+However, FVAE can not extract common latent patterns in multiple modal data.
+Therefore, in this research, we propose FMVAE which can extract common latent patterns from multiple modal of complicated data.
+In this paper, in order to evaluate FMVAE, experiments using artificial data and actual data.
+As a result, our FMVAE outperformed other methods and we confirmed non-linear tensor factorization with multiple modal data is suited for real complex data.
+
+
+Matrix and tensor factorization is a useful method to extract of common latent patterns from observed multiple modal data; user features from their purchase and movie watching.
+However, the representation of these data is highly complex and non-linearity, so they cannot be handled by tensor factorization that performs linear decomposition.
+On the other hand, variational autoencoders can handle complex data, especially factorized variational autoencoders (FVAEs) can extract latent patterns with single modal data.
+Although, FVAE can not treat multiple modal data.
+Therefore, in this research, we propose factorized multiple variational autoencoders (FMVAEs). 
+It can find common latent patterns from multiple modal of complicated data.
+In order to evaluate our FMVAE, we apply them to an artificial dataset and an actual dataset.
+As a result, our FMVAE outperformed other methods and we confirmed non-linear tensor factorization with multiple modal data is suited for real complex data.
+
+Multiple data factorization with variational autoencoders
