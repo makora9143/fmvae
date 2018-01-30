@@ -9,9 +9,6 @@ class Encoder(nn.Module):
     def __init__(self, input_dim, hidden_dim, z_dim):
         super(Encoder, self).__init__()
         self.fc1 = nn.Linear(input_dim, hidden_dim)
-        # self.tmp = nn.Linear(hidden_dim, hidden_dim)
-        # self.tmp2 = nn.Linear(hidden_dim, hidden_dim)
-        # self.tmp3 = nn.Linear(hidden_dim, hidden_dim)
         self.fc21 = nn.Linear(hidden_dim, z_dim)
         self.fc22 = nn.Linear(hidden_dim, z_dim)
         self.activation = nn.Tanh()
@@ -23,7 +20,7 @@ class Encoder(nn.Module):
         # hidden = self.softplus(self.tmp(hidden))
         # hidden = self.softplus(self.tmp2(hidden))
         # hidden = self.softplus(self.tmp3(hidden))
-
+        #
         z_mu = self.fc21(hidden)
         z_sigma = self.softplus(self.fc22(hidden))
 
@@ -33,6 +30,9 @@ class Decoder(nn.Module):
     def __init__(self, input_dim, hidden_dim, z_dim):
         super(Decoder, self).__init__()
         self.fc1 = nn.Linear(z_dim, hidden_dim)
+        # self.tmp = nn.Linear(hidden_dim, hidden_dim)
+        # self.tmp2 = nn.Linear(hidden_dim, hidden_dim)
+        # self.tmp3 = nn.Linear(hidden_dim, hidden_dim)
         self.fc21 = nn.Linear(hidden_dim, input_dim)
         self.fc22 = nn.Linear(hidden_dim, input_dim)
         self.activation = nn.Tanh()
@@ -48,18 +48,19 @@ class Decoder(nn.Module):
 
 
 class VAE(nn.Module):
-    def __init__(self, input_dim, hidden_dim, z_dim, kld=None):
+    def __init__(self, input_dim, hidden_dim, z_dim, use_cuda=False):
         super(VAE, self).__init__()
 
         self.encoder = Encoder(input_dim, hidden_dim, z_dim)
         self.decoder = Decoder(input_dim, hidden_dim, z_dim)
 
-        if kld is None:
-            self.kld = self.kl_divergence
-        else:
-            self.kld = kld
+        self.kld = self.kl_divergence
 
-    def forward(self, index, x):
+        if use_cuda:
+            self.cuda()
+        self.use_cuda = use_cuda
+
+    def forward(self, x):
         z_mu, z_sigma = self.encoder(x)
         z = self.rsampling(z_mu, z_sigma)
         recon_x_mu, recon_x_sigma = self.decoder(z)
@@ -70,6 +71,8 @@ class VAE(nn.Module):
 
     def rsampling(self, mu, sigma):
         eps = Variable(torch.randn(mu.size()))
+        if self.use_cuda:
+            eps = eps.cuda()
         return mu + sigma * eps
 
     def kl_divergence(self, mu, sigma):
@@ -82,7 +85,7 @@ class VAE(nn.Module):
 class FVAE(nn.Module):
     def __init__(self, row_num, col_num, input_dim, hidden_dim, z_dim):
         super(FVAE, self).__init__()
-        
+
         self.U = nn.Embedding(row_num, z_dim, sparse=True)
         self.V = nn.Embedding(col_num, z_dim, sparse=True)
 
@@ -140,7 +143,7 @@ class FMVAE(nn.Module):
         decoder = None
         mat1 = None
         mat2 = None
-        
+
         if data_kind == 'X':
             encoder = self.x_encoder
             decoder = self.x_decoder
@@ -163,9 +166,9 @@ class FMVAE(nn.Module):
         latent = self.rsampling(latent_mu, latent_sigma)
         recon_mu, recon_sigma = decoder(latent)
 
-        ll = torch.sum(self.log_likelihood_normal(data[1], recon_mu, recon_sigma))
-        kld = torch.sum(self.kl_divergence(latent_mu, latent_sigma, data[0], mat1, mat2))
-        return ll# - kld
+        ll = torch.mean(self.log_likelihood_normal(data[1], recon_mu, recon_sigma))
+        kld = torch.mean(self.kl_divergence(latent_mu, latent_sigma, data[0], mat1, mat2))
+        return ll - kld
 
     def kl_divergence(self, mu, sigma, index, U, V):
         U_i = U(index[0]).squeeze(1)
@@ -178,6 +181,7 @@ class FMVAE(nn.Module):
 
     def rsampling(self, mu, sigma):
         eps = Variable(torch.randn(mu.size()))
+        eps = eps.cuda()
         return mu + sigma * eps
 
     def log_likelihood_normal(self, x, mu, sigma):
