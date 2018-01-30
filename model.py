@@ -79,7 +79,7 @@ class VAE(nn.Module):
         return - 0.5 * torch.sum(1 + torch.log(sigma) - torch.pow(mu, 2) - sigma, 1)
 
     def log_likelihood_normal(self, x, mu, sigma):
-        return - 0.5 * torch.sum(torch.log(2 * math.pi * sigma) - torch.pow(x - mu, 2) / (2 * sigma), 1)
+        return torch.sum(- 0.5 * torch.log(2 * math.pi * sigma) - torch.pow(x - mu, 2) / (2 * sigma), 1)
 
 
 class FVAE(nn.Module):

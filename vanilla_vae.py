@@ -13,13 +13,13 @@ def train_epoch(vae, optimizer, loaders, variable):
     for step, x in enumerate(loaders['X']):
         optimizer.zero_grad()
         x = variable(x)[1]
-        loss = vae(x)
+        loss = - vae(x)
         loss.backward()
         optimizer.step()
         epoch_loss += loss.data[0]
         if step % 100 == 0:
             print('{} step loss:{}'.format(step, loss.data[0]))
-    return epoch_loss
+    return epoch_loss / step
 
 def train():
     use_cuda = True
@@ -31,7 +31,7 @@ def train():
 
     compressed = transforms.Compose([dataset.ToTensor()])
     variable = dataset.ToVariable(use_cuda=use_cuda)
-    kwargs = {'num_workers': 2, 'pin_memory': True}
+    kwargs = {'num_workers': 8, 'pin_memory': True}
     loaders = dataset.setup_data_loaders(dataset.LastFMCSVDataset, use_cuda, batch_size, transform=compressed, **kwargs)
 
     print('{} steps for all data / 1 epoch'.format(len(loaders['X'])))
